@@ -1,0 +1,284 @@
+// VARIABLES
+$transition: all 250ms ease;
+$dev-border: 1px solid red;
+$white: rgb(230, 230, 230);
+$black: rgb(25, 25, 25);
+$black-alpha: rgba(25, 25, 25, 0.5);
+$black-alpha-gradient: linear-gradient(
+  to bottom,
+  rgba(25, 25, 25, 0.5),
+  rgba(25, 25, 25, 0.05)
+);
+// -------------------------------------------------------
+// MIXINS
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + ".ttf") format("truetype");
+  }
+}
+
+@mixin overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  // background: rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+//----------------------------------------------------------------
+@include font("Oswald ExtraLight", "./fonts/Oswald-ExtraLight");
+@include font("Oswald Light", "./fonts/Oswald-Light");
+@include font("Oswald Regular", "./fonts/Oswald-Regular");
+@include font("Oswald Medium", "./fonts/Oswald-Medium");
+@include font("Oswald SemiBold", "./fonts/Oswald-SemiBold");
+@include font("Oswald Bold", "./fonts/Oswald-Bold");
+
+body {
+  // background: rgb(84, 156, 204);
+  color: $white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  padding: 10px;
+  background: url("./images/default-bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100%;
+  transition: $transition;
+  // z-index: -100;
+}
+
+.App::after {
+  @include overlay();
+}
+
+.title {
+  font-family: Oswald ExtraLight;
+  margin: 0;
+  text-align: center;
+  font-size: 6em;
+  margin-top: 15%;
+  // border: $dev-border;
+  padding: 15px;
+  line-height: 1.25em;
+  background: $black-alpha-gradient;
+  border-radius: 15px;
+}
+
+.App-clear {
+  background: url("./images/clear-night-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-clear-night {
+  background: url("./images/clear-night-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-snow {
+  background: url("./images/snow-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-drizzle {
+  background: url("./images/drizzle-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-cloudy {
+  background: url("./images/cloudy-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-fog {
+  background: url("./images/fog-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-rain {
+  background: url("./images/rain-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-snow {
+  background: url("./images/snow-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-thunderstorm {
+  background: url("./images/thunderstorm-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.App-tornado {
+  background: url("./images/tornado-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  position: relative;
+  z-index: 10;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+
+  i {
+    font-size: 2.8em;
+    margin: 0 10px;
+    align-self: flex-end;
+    color: rgb(230, 230, 230);
+  }
+}
+
+.search-bar {
+  border: none;
+  // display: inline-block;
+  padding: 15px;
+  background: rgba(25, 25, 25, 0.4);
+  // background: none;
+  // border-bottom: 1px solid rgb(238, 206, 147);
+  font-family: Oswald ExtraLight;
+  font-size: 2em;
+  color: rgb(230, 230, 230);
+  transition: $transition;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.search-bar::placeholder {
+  color: rgb(230, 230, 230);
+}
+
+.search-bar:hover {
+  // border-bottom: 1px solid rgb(255, 240, 212);
+  background: rgba(50, 50, 50, 0.4);
+}
+.search-bar:focus {
+  // border-bottom: 1px solid rgb(255, 240, 212);
+  color: rgb(230, 230, 230);
+  background: rgba(50, 50, 50, 0.4);
+}
+
+.location-box {
+  position: relative;
+  color: $white;
+  font-family: Oswald Bold;
+  font-size: 4em;
+  margin: 50px 0 25px;
+  padding: 0 25px 50px;
+  // padding: 25px;
+  background: $black-alpha-gradient;
+  border-radius: 10px;
+  .location-title {
+    font-size: 0.3em;
+    font-family: Oswald ExtraLight;
+    position: absolute;
+    color: $white;
+    top: 5px;
+    left: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px dotted $white;
+  }
+  .location {
+    font-size: 0.75em;
+  }
+
+  i {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.5em;
+  }
+
+  .date {
+    font-family: Oswald ExtraLight;
+    font-size: 0.5em;
+  }
+}
+
+.weather-box {
+  position: relative;
+  color: $white;
+  font-family: Oswald Light;
+  font-size: 3em;
+  // margin: 50px 0;
+  padding: 37px 0;
+  // padding: 25px;
+  background: $black-alpha;
+  border-radius: 10px;
+  text-align: center;
+  .weather-title {
+    font-size: 0.4em;
+    font-family: Oswald ExtraLight;
+    position: absolute;
+    color: $white;
+    top: 5px;
+    left: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px dotted $white;
+  }
+  .weather {
+    font-size: 0.75em;
+    text-transform: capitalize;
+  }
+}
+
+.social-box {
+  position: relative;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0;
+  font-family: Oswald ExtraLight;
+  font-size: 1.25em;
+  // border: $dev-border;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 15px;
+      cursor: pointer;
+      transition: $transition;
+    }
+
+    li:hover {
+      font-size: 1.15em;
+    }
+  }
+}
