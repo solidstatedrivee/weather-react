@@ -1,7 +1,9 @@
 # React.js Weather App
+*Version 1.1*
 
-![repo-image-1](https://user-images.githubusercontent.com/18039225/120667841-df28e780-c45b-11eb-9048-548127bdcb1b.jpg)
-![repo-image-2](https://user-images.githubusercontent.com/18039225/120668438-742be080-c45c-11eb-8801-7385ba8684d9.jpg)
+![repo-new-1](https://user-images.githubusercontent.com/18039225/121703712-1a04ce00-caa1-11eb-9d28-efa7480a7ea0.jpg)
+![repo-new-2](https://user-images.githubusercontent.com/18039225/121703724-1cffbe80-caa1-11eb-9fd8-51e31f61dd9a.jpg)
+
 
 ## Technologies used:
 
