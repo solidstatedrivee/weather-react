@@ -1,5 +1,7 @@
 # React.js Weather App
 
+_Version 1.1_
+
 ![repo-new-1](https://user-images.githubusercontent.com/18039225/121703712-1a04ce00-caa1-11eb-9d28-efa7480a7ea0.jpg)
 ![repo-new-2](https://user-images.githubusercontent.com/18039225/121703724-1cffbe80-caa1-11eb-9fd8-51e31f61dd9a.jpg)
 
