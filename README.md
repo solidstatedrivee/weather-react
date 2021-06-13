@@ -16,3 +16,5 @@ _Version 1.1_
 ## Summary
 
 A weather app that I created in React that is to be viewed on mobile. The next version will include a responsive design! This is one of the first apps I have created with React and I'm proud of it! I love working with API's because you get all kinds of dynamic data that you can use to render dynamic components, which is obviously great for apps. This project is a great opportunity to get more familiar with React and creating SPA's. ~~This is is just an initial commit and i will revise the design, UX, and add much more weather info.~~ I've updated this app with a new version that includes a modal for the social links, a lot more weather info, and more relevant background and icons. Happy coding 🤓!
+
+You can view the project on mobile [here](https://solidstatedrivee.github.io/weather-react/)!
